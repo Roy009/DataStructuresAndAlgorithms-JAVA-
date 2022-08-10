@@ -63,6 +63,31 @@ class LinkedList_1 {
         }
         prev.next = temp.next;
     }
+    // Delete at Position
+    public void deleteNodeAtPosition(int pos){
+        // Edge Case - if head is null
+        if (head == null) {
+            return;
+        }
+        // storing head in temp
+        Node temp = head;
+        // if the node to be deleted is head change the pointer of the node head=temp.next
+        if (pos == 0){
+            head = temp.next;
+            return;
+        }
+        // Other-wise traverse the linked list
+        for (int i = 0; temp != null && i < pos - 1; i++) {
+            temp = temp.next;
+        }
+        // if nothing is found the node is not there
+        if (temp == null && temp.next == null)
+            return;
+        // Storing the next node of the node to be deleted to the next variable
+        Node next = temp.next.next;
+        // after that change the previous node next pointer to next variable
+        temp.next = next;
+    }
 
     // Printing the LinkedList
     public void printList(){
