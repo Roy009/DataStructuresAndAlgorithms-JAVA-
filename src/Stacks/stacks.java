@@ -64,5 +64,7 @@ public class stacks {
         s.printStack();
         s.peek();
         s.isEmpty();
+        System.out.println(90 / 12 * 23);
+        System.out.println();
     }
 }

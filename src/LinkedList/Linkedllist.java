@@ -88,6 +88,16 @@ class LinkedList_1 {
         // after that change the previous node next pointer to next variable
         temp.next = next;
     }
+    public int lengthOfLinkedList(){
+        Node temp = head;
+        int count = 0;
+        while (temp != null){
+            count++;
+            temp = temp.next;
+        }
+        return count;
+    }
+
 
     // Printing the LinkedList
     public void printList(){
@@ -109,5 +119,6 @@ public class Linkedllist {
         list.push(5);
         list.printList();
         System.out.println(list.head.data);
+        System.out.println(list.lengthOfLinkedList());
     }
 }
