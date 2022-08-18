@@ -88,6 +88,7 @@ class LinkedList_1 {
         // after that change the previous node next pointer to next variable
         temp.next = next;
     }
+    // iterative approach
     public int lengthOfLinkedList(){
         Node temp = head;
         int count = 0;
@@ -96,6 +97,13 @@ class LinkedList_1 {
             temp = temp.next;
         }
         return count;
+    }
+
+    // recursive approach
+    static int getCountRec(Node node){
+        if (node == null)
+            return 0;
+        return 1 + getCountRec(node.next);
     }
 
 
@@ -109,7 +117,7 @@ class LinkedList_1 {
     }
 }
 
-public class Linkedllist {
+public class    Linkedllist {
     public static void main(String[] args) {
         LinkedList_1 list = new LinkedList_1();
         list.append(4);
