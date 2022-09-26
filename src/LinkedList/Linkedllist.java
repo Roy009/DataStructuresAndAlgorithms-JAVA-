@@ -5,7 +5,8 @@ class LinkedList_1 {
     static class Node{
         int data;
         Node next;
-        Node(int d){ data = d; next = null; }
+        Node(int d){ data = d; next = null;
+        }
     }
     // Insert a Node at the front
     public void push(int data){
@@ -65,8 +66,8 @@ class LinkedList_1 {
     }
     // Delete at Position
     public void deleteNodeAtPosition(int pos){
-        // Edge Case - if head is null
-        if (head == null) {
+        // Edge Case - if head is nul
+         if (head == null) {
             return;
         }
         // storing head in temp

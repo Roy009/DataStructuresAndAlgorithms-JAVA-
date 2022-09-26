@@ -5,7 +5,7 @@ class stacksDataStructure{
     static final int MAX = 1000;
     // top element of the stack
     int top;
-    int arr[] = new int[MAX];
+    int []arr = new int[MAX];
 
     // returns that the stack is empty or not
     boolean isEmpty(){
