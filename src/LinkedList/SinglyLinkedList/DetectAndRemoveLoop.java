@@ -1,4 +1,4 @@
-package LinkedList;
+package LinkedList.SinglyLinkedList;
 
 public class DetectAndRemoveLoop {
     static Node5 head;
