@@ -57,6 +57,8 @@ public class CircularLinkedList {
         System.out.println(item + " is not present in the list");
         return last;
     }
+
+    // For traversing the list
     static void traverse(Node last){
         Node p;
 
