@@ -19,10 +19,11 @@ public class sortInsert {
         } else if(current.data >= new_node.data) {
             while (current.next != head)
                 current = current.next;
+
             current.next = new_node;
             new_node.next = head;
             head = new_node;
-        }else {
+        } else {
             while (current.next != head && current.next.data < new_node.data)
                 current = current.next;
             new_node.next = current.next;
