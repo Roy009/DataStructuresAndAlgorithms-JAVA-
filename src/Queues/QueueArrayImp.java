@@ -12,6 +12,7 @@ class Queue {
         arr = new int[this.capacity];
     }
 
+
     // Checking the queue is full or not
     boolean isFull(Queue queue){
         return (queue.size == queue.capacity);
@@ -42,12 +43,16 @@ class Queue {
         this.size = this.size - 1;
         return item;
     }
+
+    // get the front element
     int getFront(){
         if (isEmpty(this)){
             return Integer.MIN_VALUE;
         }
         return this.arr[this.front];
     }
+
+    // get the rear element
     int getRear(){
         if (isEmpty(this)){
             return Integer.MIN_VALUE;
@@ -55,9 +60,12 @@ class Queue {
         return this.arr[this.rear];
     }
 }
+
 public class QueueArrayImp{
     public static void main(String[] args) {
+
         Queue queue = new Queue(50);
+
         queue.enqueue(10);
         queue.enqueue(20);
         queue.enqueue(30);
