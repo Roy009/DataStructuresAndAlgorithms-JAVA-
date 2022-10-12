@@ -118,7 +118,7 @@ class LinkedList_1 {
     }
 }
 
-public class    Linkedllist {
+public class Linkedllist {
     public static void main(String[] args) {
         LinkedList_1 list = new LinkedList_1();
         list.append(4);

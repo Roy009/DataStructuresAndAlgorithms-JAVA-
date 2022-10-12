@@ -84,6 +84,17 @@ public class DoublyLinkedList {
             node.next.prev = node;
         }
     }
+    void deleteNode(Node node){
+        if(head == null || node == null)
+            return;
+        if (head == node)
+            head = node.next;
+        if (node.next != null)
+            node.next.prev = node.prev;
+        if (node.prev != null)
+            node.prev.next = node.next;
+        return;
+    }
     public static void main(String[] args) {
         DoublyLinkedList dl = new DoublyLinkedList();
         dl.push(5);
@@ -100,6 +111,9 @@ public class DoublyLinkedList {
         System.out.println(dl.find(7));
         dl.insert(4,8);
         System.out.println();
+        dl.printList();
+        dl.deleteNode(dl.head);
+        dl.deleteNode(dl.head.next);
         dl.printList();
     }
 }

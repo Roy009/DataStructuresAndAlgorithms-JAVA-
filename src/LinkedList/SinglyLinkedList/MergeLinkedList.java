@@ -57,6 +57,21 @@ public class MergeLinkedList {
         }
         return temp.next;
     }
+    static Node4 sortedMerge2(Node4 A, Node4 B){
+        if (A == null)
+            return B;
+        if (B == null)
+            return A;
+        if (A.data < B.data) {
+            A.next = sortedMerge2(A.next, B);
+            return A;
+        }else{
+            B.next = sortedMerge2(A,B.next);
+            return B;
+        }
+    }
+
+
     public static void main(String[] args) {
 
         MergeLinkedList ml = new MergeLinkedList();
@@ -78,7 +93,8 @@ public class MergeLinkedList {
         System.out.println("Linked list 2");
         ml1.printList();
 
-        ml.head = sortedMerge(ml.head, ml1.head);
+//        ml.head = sortedMerge(ml.head, ml1.head);
+        ml.head = sortedMerge2(ml.head, ml1.head);
 
         System.out.println("After merging the two linked list");
         ml.printList();
