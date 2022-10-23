@@ -9,7 +9,7 @@ public class BinaryTree {
             right = left = null;
         }
     }
-    Node root;
+    private Node root;
 
     BinaryTree(int key){
         root = new Node(key);
@@ -40,6 +40,18 @@ public class BinaryTree {
     }
     void preOrderTraversal(){
         preOrderTraversal(root);
+        System.out.println();
+    }
+    void postorderTraversal(Node node){
+        if (node == null){
+            return;
+        }
+        postorderTraversal(node.left);
+        postorderTraversal(node.right);
+        System.out.print(node.key + " ");
+    }
+    void postorderTraversal(){
+        postorderTraversal(root);
     }
     public static void main(String[] args) {
 
@@ -54,5 +66,7 @@ public class BinaryTree {
         tree.inOrderTraversal();
         System.out.println("Pre-Order Traversal");
         tree.preOrderTraversal();
+        System.out.println("Post order Traversal");
+        tree.postorderTraversal();
     }
 }
