@@ -56,8 +56,8 @@ public class BinaryTree {
 //           1
 //         /  \
 //        2   3
-//       / \
-//      4  5
+//       / \ / \
+//      4  5 6 7
 
         System.out.println("In-Order Traversal");
         tree.inOrderTraversal();
