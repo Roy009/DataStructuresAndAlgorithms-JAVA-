@@ -1,4 +1,7 @@
 package Trees;
+
+import java.util.Stack;
+
 public class BinaryTree {
    private Node root;
    private static class Node{
@@ -7,6 +10,21 @@ public class BinaryTree {
        Node(int key){
            this.key = key;
            this.left = this.right = null;
+       }
+   }
+   void inOrder(){
+        if (root == null)
+            return;
+       Stack<Node> s = new Stack<>();
+       Node curr = root;
+       while (curr != null || s.size() > 0){
+           while (curr != null){
+               s.push(curr);
+               curr = curr.left;
+           }
+           curr = s.pop();
+           System.out.print(curr.key + " ");
+           curr = curr.right;
        }
    }
    void inOrderTraversal(Node node){
@@ -65,5 +83,8 @@ public class BinaryTree {
         tree.preOrderTraversal();
         System.out.println("Post order Traversal");
         tree.postorderTraversal();
+        System.out.println();
+        System.out.println("In Order Traversal without recursion");
+        tree.inOrder();
     }
 }
