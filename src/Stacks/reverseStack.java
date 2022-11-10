@@ -34,5 +34,5 @@ public class reverseStack {
         System.out.println("Reversed Stack");
 
         System.out.println(stack);
-    }
+  }
 }
