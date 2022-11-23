@@ -6,7 +6,7 @@ import java.util.LinkedList;
 public class maximumOfaAllSubArray {
     static void printMax(int[] arr, int N, int k){
 
-        Deque<Integer> queue = new LinkedList<Integer>();
+        Deque<Integer> queue = new LinkedList<>();
 
         int i;
         for(i = 0; i < k; ++i){
