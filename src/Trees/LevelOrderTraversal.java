@@ -11,7 +11,7 @@ public class LevelOrderTraversal {
     static boolean levelOrderIsBST(int arr[], int n){
         if (n == 0)
             return true;
-        Queue<Node> q = new LinkedList<Node>();
+        Queue<Node> q = new LinkedList<>();
         int i = 0;
         Node newNode = new Node();
         newNode.data = arr[i++];
