@@ -1,8 +1,8 @@
-package Trees;
+package Trees.BinaryTree;
 
 import java.util.Stack;
 
-public class BinaryTree {
+public class Binarytree {
    private Node root;
    private static class Node{
        int key;
@@ -63,7 +63,7 @@ public class BinaryTree {
    }
     public static void main(String[] args) {
 
-        BinaryTree tree = new BinaryTree();
+        Binarytree tree = new Binarytree();
 
         tree.root = new Node(1);
         tree.root.left = new Node(2);

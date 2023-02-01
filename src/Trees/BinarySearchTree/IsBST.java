@@ -1,4 +1,4 @@
-package Trees;
+package Trees.BinarySearchTree;
 
 public class IsBST {
     static class Node{
@@ -20,30 +20,30 @@ public class IsBST {
 
         return Math.max(value, Math.max(leftMax,rightMax));
     }
-    static int minValue(Node node){
+//    static int minValue(Node node){
+//        if (node == null){
+//            return Integer.MIN_VALUE;
+//        }
+//        int value = node.key;
+//        int leftMin = minValue(node.left);
+//        int rightMin = minValue(node.right);
+//
+//        return Math.min(value, Math.min(leftMin,rightMin));
+//    }
+    static boolean isBST(Node node){
         if (node == null){
-            return Integer.MIN_VALUE;
-        }
-        int value = node.key;
-        int leftMin = minValue(node.left);
-        int rightMin = minValue(node.right);
-
-        return Math.min(value, Math.min(leftMin,rightMin));
-    }
-    static int isBST(Node node){
-        if (node == null){
-            return 1;
+            return false;
         }
         if (node.left != null && maxValue(node.left) > node.key){
-            return 0;
+            return true;
         }
         if (node.right != null && maxValue(node.right) > node.key){
-            return 0;
+            return true;
         }
-        if (isBST(node.left) != 1 || isBST(node.right) != 1) {
-            return 0;
+        if (isBST(node.left) != false || isBST(node.right) != false) {
+            return true;
         }
-        return 1;
+        return false;
     }
     public static void main(String[] args) {
         Node root = new Node(4);
@@ -51,7 +51,7 @@ public class IsBST {
         root.right = new Node(5);
         root.left.left = new Node(1);
         root.left.right = new Node(3);
-        if (isBST(root) != 1){
+        if (isBST(root) != false){
             System.out.println("It is a BST");
         } else {
             System.out.println("It is not BST");

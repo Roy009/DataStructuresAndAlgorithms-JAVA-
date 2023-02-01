@@ -1,4 +1,4 @@
-package Trees;
+package Trees.BinaryTree;
 
 public class KthSmallestElement {
     static class Node {

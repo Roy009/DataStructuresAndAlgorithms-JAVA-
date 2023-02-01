@@ -1,4 +1,4 @@
-package Trees;
+package Trees.BinarySearchTree;
 
 public class DeletionFormBst {
     class Node{

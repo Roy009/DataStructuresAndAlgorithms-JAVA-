@@ -1,4 +1,4 @@
-package Trees;
+package Trees.BinaryTree;
 
 public class maxWidthOfTree {
     private Node root;
