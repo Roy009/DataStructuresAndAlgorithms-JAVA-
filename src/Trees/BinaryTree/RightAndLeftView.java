@@ -41,7 +41,9 @@ public class RightAndLeftView {
         tree.root = new Node(1);
         tree.root.left = new Node(2);
         tree.root.right = new Node(3);
+        System.out.println("Right view");
         System.out.println(rightView(tree.root));
+        System.out.println("left view");
         System.out.println(leftView(tree.root));
     }
 }
