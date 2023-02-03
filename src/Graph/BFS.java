@@ -10,8 +10,8 @@ public class BFS {
         adj.get(v).add(u);
     }
     static ArrayList<Integer> bfsOfGraph(int v, ArrayList<ArrayList<Integer>> adj) {
-        ArrayList<Integer> bfs = new ArrayList<Integer>();
-        Queue<Integer> q = new LinkedList<Integer>();
+        ArrayList<Integer> bfs = new ArrayList<>();
+        Queue<Integer> q = new LinkedList<>();
         boolean[] visited = new boolean[v];
         q.add(0);
         visited[0] = true;
@@ -19,7 +19,7 @@ public class BFS {
             Integer node = q.poll();
             bfs.add(node);
             for(Integer it : adj.get(node)){
-                if(visited[it] == false){
+                if(!visited[it]){
                     visited[it] = true;
                     q.add(it);
                 }
