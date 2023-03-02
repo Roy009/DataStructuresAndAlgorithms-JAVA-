@@ -13,10 +13,19 @@ public class LeetCode_62_UniquePaths {
         return countPaths(i+1,j,n,m) + countPaths(i,j+1,n,m);
     }
 
-
+// Approach 2 [ Combinatorics ]
+    static int uniquePath2(int m , int n){
+        int N = n + m - 2;
+        int r = m - 1;
+        double res = 1;
+        for (int i = 1; i <= r; i++)
+            res = res * (N - r + i) / i;
+        return (int)res;
+    }
     public static void main(String[] args) {
         int m = 3;
         int n = 2;
         System.out.println(uniquePath1(m,n));
+        System.out.println(uniquePath2(m,n));
     }
 }
