@@ -1,8 +1,7 @@
 package LeetCodeQuestion;
 
 public class LeetCode_62_UniquePaths {
-
-    // Approach 1 [ Recursion ]
+    // Approach 1 [ Recursion ] Note -> Will Give TLE
     static int uniquePath1(int m, int n){
         return countPaths(0,0,n,m);
     }
@@ -12,8 +11,7 @@ public class LeetCode_62_UniquePaths {
         if(i >= n || j >= m) return 0;
         return countPaths(i+1,j,n,m) + countPaths(i,j+1,n,m);
     }
-
-// Approach 2 [ Combinatorics ]
+    // Approach 2 [ Combinatorics ] Note -> Most Optimal Solution
     static int uniquePath2(int m , int n){
         int N = n + m - 2;
         int r = m - 1;
