@@ -1,7 +1,10 @@
 package Arrays;
 
-public class reversalAlgoRotation {
-    static void leftRotate(int[] arr, int d){
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class Right_Rotation {
+    static void leftRotate1(int[] arr, int d){
         if (d == 0){
             return;
         }
@@ -10,6 +13,17 @@ public class reversalAlgoRotation {
         reverseArray(arr, 0, d - 1);
         reverseArray(arr, d,n - 1);
         reverseArray(arr, 0, n - 1);
+    }
+    static void leftRotate2(int[] arr, int d){
+        Deque<Integer> dq = new ArrayDeque<>();
+        for (int i : arr) {
+            dq.add(i);
+        }
+        for (int i = 0; i < d; i++) {
+            int temp = dq.remove();
+            dq.addLast(temp);
+        }
+        System.out.print(dq);
     }
     static void reverseArray(int arr[], int start, int end){
         int temp;
@@ -30,7 +44,8 @@ public class reversalAlgoRotation {
         int arr[] = {1,2,3,4,5,6,7};
         int n = arr.length;
         int d = 2;
-        leftRotate(arr,d);
+        leftRotate1(arr,d);
         printArray(arr);
+        leftRotate2(arr,d);
     }
 }
