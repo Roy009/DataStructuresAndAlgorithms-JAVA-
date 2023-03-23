@@ -29,9 +29,9 @@ public class BFS {
     }
     public static void main(String[] args) {
         int v = 5;
-        ArrayList<ArrayList<Integer>> adj = new ArrayList<ArrayList<Integer>>();
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
         for (int i = 0; i < v; i++) {
-            adj.add(new ArrayList<Integer>());
+            adj.add(new ArrayList<>());
         }
         addEdge(adj,0,1);
         addEdge(adj,0,4);
