@@ -27,7 +27,7 @@ public class LeetCode_59_SpiralMatrix {
 
     public static void main(String[] args) {
         int[][] matrix = spiralMatrix2(3);
-        for (int i = 0; i < matrix.length; i++) {
+        for (int i = 0; i < matrix.length-1; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 System.out.println(matrix[i][j]);
             }
