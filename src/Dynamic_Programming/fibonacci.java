@@ -4,6 +4,7 @@ public class fibonacci {
 
     // Method - 1
     static int fibonacciNumber1(int n){
+
         return n <= 1 ? n : fibonacciNumber1(n - 1) + fibonacciNumber1(n - 2);
     }
     // Method - 2
