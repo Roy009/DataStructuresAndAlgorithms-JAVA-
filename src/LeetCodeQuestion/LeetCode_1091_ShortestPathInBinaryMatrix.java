@@ -1,9 +1,9 @@
-package LeetCodeQuestion.LeetCode;
+package LeetCodeQuestion;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-public class _1091_ShortestPathInBinaryMatrix {
+public class LeetCode_1091_ShortestPathInBinaryMatrix {
     static int ROW, COL;
     public static int shortestPathBinaryMatrix(int[][] grid) {
         ROW = grid.length;

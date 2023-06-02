@@ -1,18 +1,20 @@
 package LeetCodeQuestion;
 
+import java.util.ArrayDeque;
 import java.util.HashSet;
+import java.util.Queue;
 import java.util.Set;
 
 public class LeetCode_36_ValidSudoku {
 
     // method - 1
-    public static boolean isValidSudoku(char[][] board){
+    public static boolean isValidSudoku(char[][] board) {
         Set<String> set = new HashSet<>();
         for (int row = 0; row < 9; row++) {
             for (int column = 0; column < 9; column++) {
                 char number = board[row][column];
-                if(number != '.'){
-                    if (!set.add(number + "in row " + row) || !set.add(number + "in column " + column) || !set.add(number + "is in block " + (row/3) + "," + (column/3))){
+                if (number != '.') {
+                    if (!set.add(number + "in row " + row) || !set.add(number + "in column " + column) || !set.add(number + "is in block " + (row / 3) + "," + (column / 3))) {
                         return false;
                     }
                 }
@@ -21,6 +23,7 @@ public class LeetCode_36_ValidSudoku {
         return true;
 
     }
+
     public static void main(String[] args) {
         // test
         char[][] board = {
