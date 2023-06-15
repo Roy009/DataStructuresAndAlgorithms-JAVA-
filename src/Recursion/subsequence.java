@@ -1,7 +1,6 @@
 package Recursion;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 public class subsequence {
     public static void printSubsequences(int i, int[] arr, ArrayList<Integer> list){
