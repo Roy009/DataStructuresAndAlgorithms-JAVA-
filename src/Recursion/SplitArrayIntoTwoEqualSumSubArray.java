@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SplitArrayIntoTwoEqualSumSubArray {
+
     public static int findSplit(int[] arr){
         int leftSum = 0;
         for (int i = 0; i < arr.length; i++) {
