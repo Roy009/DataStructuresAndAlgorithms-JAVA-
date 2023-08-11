@@ -1,5 +1,7 @@
 package GeeksForGeeksSolutions;
 
+import java.util.Arrays;
+
 public class FindThreeLargestElements {
     public static void findThreeLargestElements(int[] arr){
         if(arr.length < 3) System.out.println("Invalid Array");
@@ -22,7 +24,7 @@ public class FindThreeLargestElements {
         System.out.println("Third -> "+ third);
     }
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5,6,7};
+        int[] arr = {10,7,5,2,1};
         findThreeLargestElements(arr);
     }
 }
