@@ -6,7 +6,6 @@ public class BinarySearch {
         int target = 6;
         int s = 0;
         int e = arr.length - 1;
-
     }
     static int binarySearch(int[] arr, int target,int start, int end){
         while(start <= end) {
