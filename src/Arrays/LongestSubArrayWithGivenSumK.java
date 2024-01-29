@@ -2,7 +2,7 @@ package Arrays;
 
 import java.util.*;
 
-public class LongestSubarrayWithGivenSumK {
+public class LongestSubArrayWithGivenSumK {
     // Using Two Loops
     public static int getLongestSubArray1(int[] arr, int k){
         int len = 0;
